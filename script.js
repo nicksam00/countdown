@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
   resizeCanvas();
 
   // Countdown Logic
-  const endDate = new Date("Sep 13, 2025 00:00:00").getTime();
+  const endDate = new Date("Sep 5, 2025 12:00:00").getTime();
   function updateTimer() {
     const now = new Date().getTime();
     const diff = endDate - now;
@@ -88,4 +88,5 @@ document.addEventListener("DOMContentLoaded", function() {
     animate();
   }
 });
+
 
