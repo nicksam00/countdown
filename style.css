@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg,#0f0b2e,#2a1453,#5b1a70);
+  color: white;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+}
+.timer {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 40px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 0 30px rgba(255,0,200,0.6);
+  animation: glow 3s infinite alternate;
+}
+@keyframes glow {
+  from { box-shadow: 0 0 20px #ff4da6; }
+  to { box-shadow: 0 0 40px #ffcc00; }
+}
+.last-minute {
+  font-size: 6rem;
+  color: #ffeb3b;
+  background: rgba(0,0,0,0.6);
+  border: 3px solid #ffeb3b;
+  animation: pulse 1s infinite alternate;
+}
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.2); }
+}
+.hidden { display: none; }
+.message {
+  text-align: center;
+  font-size: 3rem;
+  color: #ff4081;
+  animation: pop 1s ease forwards, glowText 2s infinite alternate;
+}
+@keyframes pop {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes glowText {
+  from { text-shadow: 0 0 10px #ff1493; }
+  to { text-shadow: 0 0 30px #ffcc00; }
+}
+button {
+  position: fixed;       /* screen ke hisaab se fix */
+  bottom: 20px;          /* niche se 20px */
+  left: 50%;             /* horizontal center */
+  transform: translateX(-50%); /* bilkul center */
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background: linear-gradient(45deg,#ff1493,#ffcc00);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  display: block;
+}
