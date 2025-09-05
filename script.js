@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
   resizeCanvas();
 
   // Countdown Logic
-  const endDate = new Date("Sep 5, 2025 11:58:00").getTime();
+  const endDate = new Date("Sep 13, 2025 00:00:00").getTime();
   function updateTimer() {
     const now = new Date().getTime();
     const diff = endDate - now;
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Link button
   window.openLink = function() {
-    window.location.href = "https://bday-wish-2ow8.onrender.com"; // <-- Change this to your desired link
+    window.location.href = "https://bdayname.onrender.com/"; // <-- Change this to your desired link
   }
 
   // Fireworks Animation
@@ -88,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
     animate();
   }
 });
+
 
 
 
